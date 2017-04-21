@@ -1,18 +1,19 @@
-#!/bin/bash
-#PBS -l nodes=1:ppn=1
-#PBS -l walltime=5:00:00
-#PBS -l mem=2GB
-#PBS -N jobname
-#PBS -M bob.smith@nyu.edu
-#PBS -j oe
+$ cat runscript.sh
+#!/bin/sh
+#
+#SBATCH --verbose
+#SBATCH --job-name=mlpj
+#SBATCH --output=slurm_%j.out
+#SBATCH --error=slurm_%j.err
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --mem=1GB
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:2
  
-module purge
+/bin/yc2739
+/bin/pwd
+
+cd /home/yc2739/machine-learning2
 module load pytorch/intel/20170226
-RUNDIR=$SCRATCH/my_project/run-${PBS_JOBID/.*}
-mkdir -p $RUNDIR
- 
-DATADIR=$SCRATCH/my_project/data
-cd $RUNDIR
-python pytorch_nn.py
- 
-# leave a blank line at the end
+srun python 
