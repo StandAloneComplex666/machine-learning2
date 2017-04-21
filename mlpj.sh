@@ -1,4 +1,3 @@
-$ cat runscript.sh
 #!/bin/sh
 #
 #SBATCH --verbose
@@ -11,9 +10,6 @@ $ cat runscript.sh
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:2
  
-/bin/yc2739
-/bin/pwd
-
 cd /home/yc2739/machine-learning2
 module load pytorch/intel/20170226
 srun python 
