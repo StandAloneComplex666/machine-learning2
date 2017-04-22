@@ -12,4 +12,4 @@
  
 cd /home/yc2739/machine-learning2
 module load pytorch/intel/20170226
-srun python 
+srun python pytorch.py
