@@ -15,4 +15,4 @@ module load pytorch/0.1.11_5
 module load torchvision/0.1.7
 module load python/intel/2.7.12
 module load cuda/8.0.44
-srun python pytorch.py
+srun python pytorch_nn.py
